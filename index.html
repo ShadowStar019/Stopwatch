@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Stopwatch</title>
+        <link href="css/reset.css" rel="stylesheet" type="text/css" />
+        <link href="css/styles.css" rel="stylesheet" type="text/css" />
+        <meta charset="UTF-8" />
+    </head>
+    <body>
+        <div id="contentDiv">
+            <div id="displayDiv">
+                <div id="tableDiv">
+                    <div id="yearColDiv" class="colDiv">
+                        <span id="yearSpan" class="valueSpan"></span>
+                        <span class="labelSpan">Years</span>
+                    </div>
+                    <div id="dayColDiv" class="colDiv">
+                        <span id="daySpan" class="valueSpan"></span>
+                        <span class="labelSpan">Days</span>
+                    </div>
+                    <div id="hourColDiv" class="colDiv">
+                        <span id="hourSpan" class="valueSpan"></span>
+                        <span class="labelSpan">Hours</span>
+                    </div>
+                    <div id="minuteColDiv" class="colDiv">
+                        <span id="minuteSpan" class="valueSpan"></span>
+                        <span class="labelSpan">Minutes</span>
+                    </div>
+                    <div id="secondColDiv" class="colDiv">
+                        <span id="secondSpan" class="valueSpan"></span>
+                        <span class="labelSpan">Seconds</span>
+                    </div>
+                    <div id="millisecondColDiv" class="colDiv">
+                        <span id="millisecondSpan" class="valueSpan"></span>
+                        <span class="labelSpan">Milliseconds</span>
+                    </div>
+                </div>
+                <div id="goalDiv">
+                    <span id="goalPercentageSpan"></span>
+                    <div id="goalBarDivOutside">
+                        <div id="goalBarDivInside"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="informationDiv">
+                <div id="resetTimestampDiv" class="timestampDiv">
+                    <span id="resetTimestampSpan" class="timestampSpan"></span>
+                </div>
+                <div id="currentTimestampDiv" class="timestampDiv">
+                    <span id="currentTimestampSpan" class="timestampSpan"></span>
+                </div>
+                <div id="setResetTimestampDiv" class="setOptionDiv">
+                    <input id="setResetTimestampInput" class="setOptionInput" />
+                    <div id="submitResetTimestampDiv" class="submitOptionDiv">
+                        <span class="submitOptionSpan">Set Reset Timestamp</span>
+                    </div>
+                </div>
+                <div id="setGoalTimeDiv" class="setOptionDiv">
+                    <input id="setGoalTimeInput" class="setOptionInput" />
+                    <div id="submitGoalTimeDiv" class="submitOptionDiv">
+                        <span class="submitOptionSpan">Set Goal Time</span>
+                    </div>
+                </div>
+                <div id="resetDiv" class="buttonDiv">
+                    <span id="resetSpan" class="buttonSpan">Reset</span>
+                </div>
+            </div>
+        </div>
+        <script type="module" src="js/Main.js"></script>
+    </body>
+</html>

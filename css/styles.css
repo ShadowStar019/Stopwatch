@@ -1,0 +1,155 @@
+body {
+    width: 100vw;
+    height: 100vh;
+
+    background-color: black;
+    color: white;
+}
+
+span, input {
+    text-align: center;
+    font-family: Arial, Arial, Helvetica, sans-serif;
+}
+
+#contentDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+}
+
+#displayDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    width: 100%;
+    height: 80%;
+}
+
+#tableDiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    width: 100%;
+    height: 30%;
+
+    cursor: default;
+}
+
+#informationDiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    width: 100%;
+    height: 10%
+}
+
+.colDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    width: 15%;
+    height: 100%;
+}
+
+.valueSpan {
+    font-size: 5vw;
+}
+
+.labelSpan {
+    font-size: 2vw;
+}
+
+.timestampDiv, .buttonDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 15%;
+    height: 100%;
+    border: 2px solid white;
+
+    cursor: pointer;
+}
+
+.timestampSpan, .buttonSpan, #goalPercentageSpan {
+    font-size: 1.5vw;
+}
+.setOptionInput, .submitOptionSpan  {
+    font-size: 1vw;
+}
+
+.setOptionDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    width: 15%;
+    height: 100%;
+
+    cursor: default;
+}
+
+.setOptionInput {
+    text-align: center;
+
+    background-color: black;
+    color: white;
+    caret-color: white;
+
+    width: 90%;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 2px solid white;
+    border-top: 0;
+
+    outline: none;
+}
+
+.submitOptionDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 90%;
+    border: 2px solid white;
+}
+
+#goalDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 10%;
+}
+
+#goalBarDivOutside {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    width: 90%;
+    height: 50%;
+
+    border: 2px solid white;
+}
+
+#goalBarDivInside {
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    margin: 2px;
+
+    background-color: white;
+}
