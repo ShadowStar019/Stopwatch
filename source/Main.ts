@@ -79,7 +79,7 @@ class Main {
 
         const goalPercentage: number = (this.now - this.resetTime) / this.goalTime * 100;
 
-        const highestPlaceValue: number = Math.floor(Math.log(goalPercentage) / Math.log(10));
+        const highestPlaceValue: number = Math.floor(Math.log(Math.abs(goalPercentage)) / Math.log(10));
         const lowestPlaceValue: number = Math.floor(Math.log(100 / this.goalTime) / Math.log(10));
 
         const adjustPlaceValue: (value: number) => number = (value: number): number => {
@@ -90,7 +90,7 @@ class Main {
         const lowestDisplayPV: number = Math.min(adjustPlaceValue(lowestPlaceValue), 1);
         this.elements.goalPercentageSpan.innerHTML = this.selectPlaceValues(goalPercentage, lowestDisplayPV, highestDisplayPV) + "%";
 
-        this.elements.goalBarDivInside.style.width = "calc(" + Math.min(goalPercentage, 100) + "% - 4px)";
+        this.elements.goalBarDivInside.style.width = "calc(" + Math.min(Math.max(goalPercentage, 0), 100) + "% - 4px)";
 
         if (this.confirmReset && (this.now > (this.confirmTimestamp + 5000))) {
             this.confirmReset = false;
@@ -109,7 +109,8 @@ class Main {
     }
 
     floorDivide(value: number, divisor: number): number {
-        return Math.floor(value / divisor);
+        const sign: number = value < 0 ? -1 : 1;
+        return Math.floor(Math.abs(value) / divisor) * sign;
     }
 
     prependZeroes(value: number, digits: number): string {
@@ -125,7 +126,7 @@ class Main {
     }
 
     selectPlaceValues(value: number, start: number, end: number): string {
-        const valueStr: string = value.toString();
+        const valueStr: string = Math.abs(value).toString();
         const dotIndex: number = valueStr.indexOf(".");
 
         let resultStr: string[] = [];
@@ -138,6 +139,11 @@ class Main {
                 resultStr[end - i] = valueStr[index];
             }
         }
+
+        if (value < 0) {
+            resultStr.unshift("-");
+        }
+
         return resultStr.join("");
     }
 }
